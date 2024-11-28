@@ -1,0 +1,707 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --color-primary: #4f67f6;
+    --yellow: #e5c447;
+    --color-white: #e9e9e9;
+    --color-black: #262814;
+    --color-black-1: #212b36;
+    --color-blue: #121a48;
+}
+
+/* Whatsapp Logo starts */
+.wtapp {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1000;
+}
+
+.wtapp img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+}
+
+/* Whatsapp Logo ends */
+
+/* Header starts */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e5c447;
+}
+
+.left {
+    display: flex;
+    /* border: 1px solid black; */
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+.left .l1 {
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    margin: 5px;
+}
+
+.l1 i,
+p {
+    margin: 3px;
+}
+
+
+.right {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.right > div {
+    margin: 0 12px;
+    text-align: center;
+    line-height: 10px;
+    font-size: 15px;
+}
+
+/* Header ends */
+
+/* Navbar starts */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo img {
+    /* margin: 0 20px; */
+    display: flex;
+    width: 50%;
+    margin-left: 10px;
+}
+
+.head {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background: #ffffff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    height: 70px;
+    border: 1px solid black;
+}
+
+.logo img {
+    /* margin: 0 20px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+nav {
+    width: 550%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    position: relative;
+    float: left;
+}
+
+nav ul li a {
+    font-size: 16px;
+    padding: 10px;
+    color: #333333;
+    display: block;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background: #dfdf32;
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+nav ul li ul {
+    position: absolute;
+    left: 0;
+    width: 250px;
+    background: #ffff;
+    border-radius: 10px;
+    display: none;
+}
+
+nav ul li ul li {
+    height: 59px;
+    width: 250px;
+    left: -32px;
+    top: 15px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+nav ul li:focus-within > ul,
+nav ul li:hover > ul {
+    display: initial;
+}
+
+/* Navbar ends */
+
+/* Slider starts */
+.slider {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    animation: slide 5s infinite;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    opacity: .8;
+    padding: 10px;
+    color: var(--color-black-1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+}
+
+.content form {
+    width: 30%;
+    background: #e6e916;
+    padding: 10px;
+}
+
+.content form h2 {
+    color: #292929;
+    text-align: center;
+    font-size: 25px;
+    margin: 10px 0;
+    opacity: 10;
+}
+
+.content input,
+select,
+textarea {
+    font-size: 14px;
+    margin: 5px;
+    width: 96%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.content button {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background: var(--yellow);
+    color: white;
+    font-size: 16px;
+    margin: auto;
+}
+
+.content button:hover {
+    border: 2px solid var(--yellow);
+    background: white;
+    color: var(--yellow);
+    outline: none;
+}
+
+@keyframes slide {
+    0% {
+        background-image: url(https://www.vaba.co.in/images/slider-1.webp);
+    }
+
+    50% {
+        background-image: url(https://www.vaba.co.in/images/slider-6.webp);
+    }
+
+    100% {
+        background-image: url(https://www.vaba.co.in/images/slider-7.webp);
+    }
+}
+
+/* Slider ends */
+
+/* About starts */
+.selected,
+ul {
+    align-self: flex-start;
+}
+
+.content h2 {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: var(--color-blue);
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 50px 0;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: var(--color-black-1);
+}
+
+.section p {
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: justify;
+    color: var(--color-black-1);
+}
+
+.section img {
+    width: 460px;
+    border-radius: 10px;
+}
+
+.section .s2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section .s2 h2 {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: var(--color-black);
+    font-size: 40px;
+    text-transform: capitalize;
+    font-weight: 400;
+    margin: 0;
+}
+
+.section .s2 .color1 {
+    color: var(--yellow);
+    font-size: 24px;
+    font-weight: 600;
+    margin-left: 12px;
+}
+
+/* About ends */
+
+/* Mission starts */
+.section .s3 {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+}
+
+.section .s3 .color1 {
+    color: var(--yellow);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.section .s3 .blogs h2 {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 10px 0;
+    padding: 10px;
+    text-transform: capitalize;
+}
+
+.section .s3 .blogs img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 2px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+}
+
+.section .s3 .blogs {
+    margin: 0;
+    padding: 10px;
+    text-align: justify;
+    display: flex;
+    align-items: center;
+}
+
+.values-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.core-valu {
+    width: 30%;
+    padding: 20px 20px;
+}
+
+.valu-text {
+    position: relative;
+    padding-left: 60px;
+}
+
+.valu-text:before {
+    content: '';
+    background: url(https://www.vaba.co.in/images/innovation.png) no-repeat center center / cover;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 0px;
+}
+
+.improvement:before {
+    content: " ";
+    background: url(https://www.vaba.co.in/images/improve.png) no-repeat center center / cover;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 0px;
+}
+
+.quality:before {
+    content: " ";
+    background: url(https://www.vaba.co.in/images/badge.png) no-repeat center center / cover;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 0px;
+}
+
+.simplify:before {
+    content: " ";
+    background: url(https://www.vaba.co.in/images/simplify.png) no-repeat center center / cover;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 0px;
+}
+
+.value:before {
+    content: " ";
+    background: url(https://www.vaba.co.in/images/value.png) no-repeat center center / cover;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 0px;
+}
+
+.customer:before {
+    content: " ";
+    background: url(https://www.vaba.co.in/images/customer.png) no-repeat center center / cover;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 0px;
+}
+
+.valu-text h5 {
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+    font-family: "Montserrat", sans-serif, Arial, Helvetica, sans-serif;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-left: 18px;
+}
+
+.valu-text p {
+    font-size: 16px;
+    line-height: 28px;
+    margin-top: 0;
+    margin-bottom: 0rem;
+    font-family: "Montserrat", sans-serif, Arial, Helvetica, sans-serif;
+}
+
+/* Mission ends */
+
+/* Products starts */
+#product .s2 ul {
+    margin-left: 10px;
+}
+
+/* Products ends */
+
+/* Videos starts */
+.section video {
+    border-radius: 10px;
+    margin: 10px 25px;
+    object-fit: cover;
+}
+
+/* Videos ends */
+
+/* Gallery starts */
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row .col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.row .col h2 {
+    font-size: 25px;
+}
+
+.row img {
+    width: 100%;
+    margin: 0 2px;
+    border-radius: 10px;
+}
+
+/* Gallery ends */
+
+/* Footer starts */
+footer {
+    background: #151414;
+    position: relative;
+    background-image: url(https://www.vaba.co.in/images/bg-1.png);
+}
+
+footer .container {
+    max-width: 1320px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.footer1 {
+    border-bottom: 1px solid #373636;
+    padding: 3rem !important;
+}
+
+.footer1 .row,
+.footer2 .row,
+.footer3 .row,
+.copyright-area .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.footer1 .col,
+.footer2 .col,
+.footer3 .col,
+.copyright-area .col,
+.col {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding: 0 15px;
+}
+
+.footer1 .icon {
+    display: flex;
+}
+
+.footer1 i {
+    color: var(--yellow);
+    font-size: 30px;
+    float: left;
+    margin-top: 8px;
+}
+
+.bi {
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+}
+
+.txt {
+    padding-left: 15px;
+    display: inline-block;
+}
+
+.txt h4 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 2px;
+    font-family: "Montserrat", sans-serif, Arial, Helvetica, sans-serif;
+    line-height: 1.2;
+}
+
+.txt span {
+    color: #ffffff;
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif, Arial, Helvetica, sans-serif;
+}
+
+.footer2 {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 3rem 0 !important;
+}
+
+.footer2 .logo {
+    margin-bottom: 30px;
+}
+
+.footer2 .logo a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.footer2 .logo img {
+    max-width: 200px;
+    vertical-align: middle;
+    border: none;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+.foot-txt p {
+    margin-bottom: 14px;
+    font-size: 16px;
+    color: #fff;
+    line-height: 20px;
+    font-family: "Montserrat", sans-serif, Arial, Helvetica, sans-serif;
+}
+
+.col .p1 .p2 h3 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 0 40px;
+    position: relative;
+    line-height: 1.2;
+}
+
+.p1 ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 25px;
+}
+
+.p1 ul li {
+    list-style: none;
+    margin-bottom: 12px;
+    font-size: 14px;
+    width: 50%;
+}
+
+.p1 ul li a {
+    color: #ffffff;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif, Arial, Helvetica, sans-serif;
+}
+
+.p1 ul li a:hover {
+    color: var(--yellow);
+    transition: all 0.3s ease-in-out;
+}
+
+.footer-social-icon a {
+    color: #fff;
+    font-size: 16px;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.footer-social-icon img {
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+.footer3 {
+    padding-top: .25rem !important;
+    padding-bottom: 1rem !important;
+}
+
+.copyright p,
+.copyright-area p {
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+    margin: 0;
+    font-weight: bold;
+    line-height: 28px;
+    font-family: "Montserrat", sans-serif, Arial, Helvetica, sans-serif;
+}
+
+.copyright p span {
+    color: #fec66d;
+}
+
+.copyright p a {
+    color: #fff;
+    font-weight: normal;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.copyright-area {
+    background: #202020;
+    padding: 25px 0;
+}
+
+.copyright-area .container {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+/* Footer ends */
+
+.div right{
+    width: 100px;
+    height: 200px;
+    align-items: flex-end;
+}
+    
+    
